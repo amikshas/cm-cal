@@ -120,7 +120,7 @@ resource "aws_security_group_rule" "create-sgr-ssh" {
   protocol          = "tcp"
   to_port           = 22
   type              = "ingress"
-  self              = false
+  
 }
 
 resource "aws_security_group_rule" "create-sgr-jenkins" {
@@ -130,7 +130,7 @@ resource "aws_security_group_rule" "create-sgr-jenkins" {
   protocol          = "tcp"
   to_port           = 8080
   type              = "ingress"
-  self              = false
+  
 }
 
 resource "aws_security_group_rule" "create-sgr-outbound" {
@@ -140,7 +140,7 @@ resource "aws_security_group_rule" "create-sgr-outbound" {
   protocol          = "all"
   to_port           = 65535
   type              = "egress"
-  self              = false
+  
 }
 
 resource "aws_instance" "web" {
